@@ -1,4 +1,4 @@
-import ExperimentEntry from './ExperimentEntry.js';
+import { ExperimentEntry } from '../Model/ExperimentEntry.js';
 
 class ExperimentHelper {
   constructor() {
