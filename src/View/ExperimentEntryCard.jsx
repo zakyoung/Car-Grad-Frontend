@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, Heading, Stack, Tag, Separator } from '@chakra-ui/react';
+import { Box, Text, Heading, Stack, Tag, Divider } from '@chakra-ui/react';
 
 const ExperimentEntryCard = ({ entry }) => {
   return (
@@ -17,7 +17,7 @@ const ExperimentEntryCard = ({ entry }) => {
         <Text fontSize="sm" color="gray.500">
           {new Date(entry.experiment_time).toLocaleString()}
         </Text>
-        <Separator />
+        <Divider />
 
         <Text>
           <strong>Final Distance:</strong> {entry.final_distance.toFixed(2)} meters

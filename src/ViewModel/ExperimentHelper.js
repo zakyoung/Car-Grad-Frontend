@@ -9,14 +9,17 @@ class ExperimentHelper {
     try {
       const response = await fetch(this.apiUrl);
       const data = await response.json();
-      const entries = this.createEntriesFromResponse(data);
-      console.log("Experiment entries have been created");
+      let entries = this.createEntriesFromResponse(data);
+      entries.sort((a, b) => new Date(b.experiment_time) - new Date(a.experiment_time));
+  
+      console.log("Experiment entries have been created and sorted");
       return entries;
     } catch (error) {
       console.error("Error fetching experiment entries:", error);
       return [];
     }
   }
+  
 
   createEntriesFromResponse(data) {
     return data.map(entry => new ExperimentEntry(

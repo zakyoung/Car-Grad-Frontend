@@ -29,7 +29,6 @@ export default function ExperimentDataHome() {
 
   return (
     <Box p={6}>
-      <Heading>Test</Heading>
       <Flex justifyContent="space-between" alignItems="center" mb={4}>
         <Text fontSize="2xl" fontWeight="bold">Experiment Entries</Text>
         <Button colorScheme="teal" onClick={loadEntries}>Refresh</Button>
